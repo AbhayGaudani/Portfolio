@@ -1,26 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Concert+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100..900&display=swap');
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-paraBtn: "Source Serif 4", serif;
+  --font-heading: "Concert One", sans-serif;
+  --font-title: "Poppins", sans-serif;
+  --font-Roboto: "Roboto Slab", serif;
 }
-
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme{
+    --shadow-icon: 2px 3px 10px rgba(0, 0, 0, 0.30) 
 }
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+@theme{
+    --inset-shadow-icon: inset 1px 2px 0px rgba(40, 40, 43, 1)
+}
+@theme{
+  --inset-shadow-showContact: inset 5px 3px 4px rgba(255, 219, 112, 1)
+}
+@theme{
+  --inset-shadow-showContact: inset 1px 1px 1px rgba(255, 219, 112, 1)
+}
+@theme{
+  --breakpoint-xs: 412px;
+  --breakpoint-xxs: 320px;
+  --breakpoint-xxxs: 320px;  
+}
+::-webkit-scrollbar{
+  display: none;
+}
+/* EDUCATIION */
+.animation-fadeIn{
+  animation: fadeIn 1s
+}
+@keyframes fadeIn {
+  0%{
+    opacity: 0;
+    transform: translateY(25px);
+  }
+  100%{
+    opacity: 100;
   }
 }
 
-body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+/* ALL OVER */
+.animation-In{
+  animation: In 1s;
 }
+@keyframes In {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 100;
+  }
+}
+

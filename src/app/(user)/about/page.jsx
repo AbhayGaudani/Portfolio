@@ -66,7 +66,7 @@ export default function page() {
               My Skills
               <Activity className="xs:-mt-9 sm:ml-35 xs:ml-30 xxs:ml-19 xxs:h-5 xxs:-mt-5.5 xs:h-9 xs:w-9" />
             </p>
-            <div className="2xl:h-80 2xl:w-195 2xl:ml-10 md:mr-3 sm:mr-2 xxs:mr-2 lg:mr-4 lg:h-80 lg:pt-5 md:pt-4 sm:pb-5 sm:pt-3 xxs:pt-3 xxs:pb-5 mt-12 md:pb-5 lg:pb-0 2xl:px-7 2xl:py-5 2xl:pb-0  inset-shadow-icon inset-shadow-neutral-700 rounded-2xl shadow-icon  items-center justify-center">
+            <div className="2xl:h-80 2xl:w-195 2xl:ml-10 md:mr-3 sm:mr-2 xxs:mr-2 lg:mr-4 lg:h-80 lg:pt-5 md:pt-4 sm:pb-5 sm:pt-3 xxs:pt-3 xxs:pb-5 mt-12 md:pb-5 lg:pb-0 2xl:px-7 2xl:py-7  inset-shadow-icon inset-shadow-neutral-700 rounded-2xl shadow-icon  items-center justify-center">
               <motion.div
                 initial={{ opacity: 0, translateY: "50%" }}
                 whileInView={{ opacity: 1, translateY: "0" }}

@@ -38,7 +38,7 @@ export default function page() {
     {
       programming: "JavaScript, Java, Programing in C, Python",
       technologies:
-        "React.JS, Next.JS, Node.JS, Express.JS, GIT, Tailwind Css, Html, Css",
+        "React JS, Next JS, Git, GitHub, Shopify, Tailwind CSS, HTML, CSS",
       softSkill: "Problem-Solving, Communication, Time Management, Teamwork",
       language: "English, Hindi, Gujarati",
     },
@@ -90,7 +90,7 @@ export default function page() {
             <p className="sm:text-[28px] xs:text-2xl xxs:text-xl font-bold font-Roboto  -mt-3 after:content-[''] after:absolute after:w-10 after:h-1 after:bg-[#ffdb70] sm:after:-ml-87 xxs:after:-ml-62 xs:after:-ml-75 after:rounded-2xl xxs:after:mt-10 xs:after:mt-12">
               Languages & Technologies
             </p>
-            <div className="2xl:h-50 2xl:w-195 xxs:mr-3 xl:w-145 2xl:ml-10 mt-12  px-7 py-6 inset-shadow-icon inset-shadow-neutral-700 rounded-2xl shadow-icon  items-center justify-center">
+            <ul className="2xl:h-50 2xl:w-195 xxs:mr-3 xl:w-145 2xl:ml-10 mt-12  px-7 py-6 inset-shadow-icon inset-shadow-neutral-700 rounded-2xl shadow-icon  items-center justify-center">
               {skills.map((skill, index) => (
                 <li key={index} className=" list-none ">
                   <p className="text-neutral-300 pb-3 xxs:text-[14px] xs:text-[16px]">
@@ -119,7 +119,7 @@ export default function page() {
                   </p>
                 </li>
               ))}
-            </div>
+            </ul>
           </div>
         </div>
       </div>

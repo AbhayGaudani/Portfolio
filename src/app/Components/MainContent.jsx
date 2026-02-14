@@ -1,6 +1,6 @@
 "use client";
 
-import React, { Children, useState } from "react";
+import React, { useEffect, useState } from "react";
 import Navbar from "./Navbar";
 import ContactInfo from "./ContactInfo";
 import {
@@ -18,12 +18,18 @@ import useBelowXl from "./useBelowXl";
 export default function MainContent({ children }) {
   const router = useRouter();
   const isBelowXl = useBelowXl();
+  const [mounted, setMounted] = useState(false);
+  useEffect(() => {
+    setMounted(true);
+  }, []);
+
   const [isOpen, setIsOpen] = useState(false);
   const toggleOpen = () => {
     if (isBelowXl) {
       setIsOpen((prev) => !prev);
     }
   };
+  if (!mounted) return null; // Or a loading skeleton/placeholder
   return (
     <div className=" pb-[39px] bg-[#121212] flex sm:flex-col xs:flex-col xxs:flex-col xl:flex-row text-white lg:px-40 md:px-15 sm:px-10 xs:px-4 xxs:px-3 pt-10 xl:justify-center xxs:items-center xl:items-start">
       {/* LEFT SIDEBAR */}
@@ -80,20 +86,26 @@ export default function MainContent({ children }) {
         <div className=" w-20 xl:mx-24 lg:mx-76 lg:pb-5 md:mx-70 sm:pb-3 sm:ml-59 xxs:pb-4 xs:ml-37 xxs:ml-32  justify-around overflow-hidden flex sm:mt-6 xxs:mt-4 xl:mb-5">
           <Instagram
             onClick={() =>
-              router.push(
-                "https://www.instagram.com/abhay._.1011/profilecard/?igsh=MWZsZ3NqZXJpcGhzMA=="
+              window.open(
+                "https://www.instagram.com/abhay._.1011/profilecard/?igsh=MWZsZ3NqZXJpcGhzMA==",
+                "_blank",
               )
             }
             className="text-neutral-400 h-5 cursor-pointer"
           />
           <Facebook
             onClick={() =>
-              router.push("https://www.facebook.com/share/1BZDQT44dm/")
+              window.open(
+                "https://www.facebook.com/share/1BZDQT44dm/",
+                "_blank",
+              )
             }
             className="text-neutral-400 h-5 cursor-pointer"
           />
           <Github
-            onClick={() => router.push("https://github.com/AbhayGaudani")}
+            onClick={() =>
+              window.open("https://github.com/AbhayGaudani", "_blank")
+            }
             className="text-neutral-400 h-5 cursor-pointer"
           />
         </div>
